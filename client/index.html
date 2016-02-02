@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="ideros">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Banco</title>
+  <link rel="stylesheet" href="node_modules/angular-ui-bootstrap/dist/ui-bootstrap-csp.css">
+  <link rel="stylesheet" href="node_modules/angular-ui-bootstrap/dist/bootstrap.css">
+  <link rel="stylesheet" href="node_modules/normalize.css/normalize.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <div class="wrapper">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Banco Online</a>
+        </div>
+      </div>
+    </nav>
+  </div>
+  <div id="view" ng-view class="container"></div>
+
+  <!-- <footer class="site-footer">
+    <div id="site-footer-texts">
+      </p><strong>Banco Online - 24hs</strong><p>
+
+      <p>made by Elmano Neto</p>
+    </div>
+  </footer> -->
+
+  <footer class="footer">
+    Banco Online - Made by <strong>Elmano Neto</strong> - Built with Angular.
+  </footer>
+
+</body>
+<script src="node_modules/angular/angular.js"></script>
+<script src="node_modules/angular-route/angular-route.js"></script>
+<script src="node_modules/angular-resource/angular-resource.js"></script>
+<script src="node_modules/angular-ui-bootstrap/dist/ui-bootstrap.js"></script>
+<script src="node_modules/angular-ui-bootstrap/dist/ui-bootstrap-tpls.js"></script>
+<script src="node_modules/angular-storage/dist/angular-storage.js"></script>
+<script src="assets/js/app.js"></script>
+<script src="controllers/account_controller.js"></script>
+<script src="controllers/auth_controller.js"></script>
+<script src="api/api.js"></script>
+<script src="directives/directives.js"></script>
+<script src="auth/auth_service.js" charset="utf-8"></script>
+<script src="auth/auth_storage.js" charset="utf-8"></script>
+<script src="auth/auth_interceptor.js" charset="utf-8"></script>
+</script>
+</html>

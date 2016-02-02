@@ -1,0 +1,24 @@
+{
+  "name": "ideros",
+  "version": "1.0.0",
+  "description": "Desafio Íderos",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Elmano Neto <elmanoneto@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.4.8",
+    "angular-resource": "^1.4.9",
+    "angular-route": "^1.4.9",
+    "angular-storage": "0.0.13",
+    "angular-ui-bootstrap": "^1.0.3",
+    "normalize.css": "^3.0.3",
+    "ui-router": "^0.2.15"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.11.0",
+    "gulp": "^3.9.0"
+  }
+}
