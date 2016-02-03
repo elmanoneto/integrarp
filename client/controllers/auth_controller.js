@@ -3,7 +3,7 @@ app.controller('AuthController', function ($scope, $rootScope, $location,
   $scope.login = function (email, password) {
     AuthService.login(email, password).then(function (response) {
       if (response.error) {
-        console.log('erro');
+        alert('Email ou senha inválidos.')
       } else {
         AuthStorage.set(response.client, response.account, response.auth_token);
         $location.path('account');
@@ -11,15 +11,12 @@ app.controller('AuthController', function ($scope, $rootScope, $location,
     })
   }
 
-  console.log(AuthStorage.getAccount());
-
   $scope.signup = function (name, email, password) {
     ClientService.save({'name': name, 'email': email, 'password': password}).$promise.then(function (response) {
       if (response.success) {
         $scope.login(email, password);
       } else {
-        console.log(response);
-        console.log('erro :()');
+        alert(response.error);
       }
     })
   }
