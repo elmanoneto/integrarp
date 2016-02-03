@@ -5,11 +5,13 @@ app.controller('AuthController', function ($scope, $rootScope, $location,
       if (response.error) {
         console.log('erro');
       } else {
-        AuthStorage.set(response.client, response.account);
+        AuthStorage.set(response.client, response.account, response.auth_token);
         $location.path('account');
       }
     })
   }
+
+  console.log(AuthStorage.getAccount());
 
   $scope.signup = function (name, email, password) {
     ClientService.save({'name': name, 'email': email, 'password': password}).$promise.then(function (response) {

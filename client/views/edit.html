@@ -1,0 +1,18 @@
+<div class="edit">
+  <h2>Editar dados</h2>
+  <form class="form-home" ng-submit="update(client.name, client.email, client.password)">
+    <div class="form-group">
+      <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Nome"
+      ng-model="client.name">
+    </div>
+    <div class="form-group">
+      <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email"
+      ng-model="client.email">
+    </div>
+    <div class="form-group">
+      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Senha"
+      ng-model="password">
+    </div>
+    <button type="submit" class="btn btn-success">Editar</button>
+  </form>
+</div>

@@ -1,10 +1,12 @@
 Rails.application.routes.draw do
   resources :accounts
-
   resources :clients
+  resources :statement
 
   post 'auth' => 'auth#authenticate'
   post 'accounts/deposit' => 'accounts#deposit'
+  post 'accounts/debit' => 'accounts#debit'
+  post 'accounts/transfer' => 'accounts#transfer'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

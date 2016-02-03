@@ -33,6 +33,17 @@ class ClientsController < ApplicationController
     end
   end
 
+  def update
+    @client = Client.find_by(id: params[:id])
+    @client.update(email: params[:email], name: params[:name], password: params[:password])
+
+    if @client.save
+      render json: {success: 'Client update.', client: @client}, status: 202
+    else
+      render json: {error: @client.errors}, status: :unprocessable_entity
+    end
+  end
+
   private
 
   def client_params

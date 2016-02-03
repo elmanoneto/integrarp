@@ -12,10 +12,10 @@ app.factory("AuthService", function($http, $q, $rootScope, AuthStorage) {
       });
       return d.promise;
     },
-    
+
     logout: function () {
-      $http.defaults.headers.authorization = null;
       AuthStorage.remove();
+      $http.defaults.headers.authorization = null;
     }
   };
 });

@@ -1,0 +1,14 @@
+<div class="transfer">
+  <h2>Transferência</h2>
+  <form class="form-home" ng-submit="transfer(account.id, value)">
+    <div class="form-group">
+      <input type="text" class="form-control" id="exampleInputEmail1" placeholder="ID da conta"
+      ng-model="account.id">
+    </div>
+    <div class="form-group">
+      <input type="number" class="form-control" id="exampleInputEmail1" placeholder="Valor"
+      ng-model="value">
+    </div>
+    <button type="submit" class="btn btn-success">Transferir</button>
+  </form>
+</div>

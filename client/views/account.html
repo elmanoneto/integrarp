@@ -1,15 +1,13 @@
 <div class="account">
   <h1>Seja bem vindo, {{client.personal.name}}.</h1>
-  <div class="row">
-        <div class="col-xs-6">
-          <p>Seu saldo atual é de R${{client.account.balance}}</p>
-        </div>
-        <div class="col-xs-6">
-          <ul>
-            <li><a href="#/account/deposit">Depositar</a></li>
-            <li>Depositar</li>
-            <li><a ng-click="logout()">Encerrar sessão</a></li>
-          </ul>
-        </div>
-      </div>
+  <p>Seu saldo atual é de <span class="balance"><strong>R${{client.account.balance}}</strong></span></p>
+  <ul>
+    <li><a href="#/account/debit">Debitar</a></li>
+    <li><a href="#/account/deposit">Depositar</a></li>
+    <li><a href="#/account/edit">Editar dados</a></li>
+    <li><a href="#/account/statement">Extrato</a></li>
+    <li><a href="#/account/transfer">Transferência</a></li>
+    <hr>
+    <li><span class="logout"><a ng-click="logout()">Sair da sessão</a></span></li>
+  </ul>
 </div>

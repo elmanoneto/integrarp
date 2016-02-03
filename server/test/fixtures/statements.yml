@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  id_account: 1
+  balance: 9.99
+  type: 
+
+two:
+  id_account: 1
+  balance: 9.99
+  type: 

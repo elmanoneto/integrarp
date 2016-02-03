@@ -1,0 +1,33 @@
+<div class="statement">
+  <h2>Extrato bancário</h2>
+  <form class="form-home" ng-submit="statement(begin, end)">
+    <div class="form-group">
+      <label for="">De</label>
+      <input class="form-control" id="exampleInputEmail1" placeholder="Valor"
+      ng-model="begin" type="date">
+      <label for="">Até</label>
+      <input class="form-control" id="exampleInputEmail1" placeholder="Valor"
+      ng-model="end" type="date">
+    </div>
+    <button type="submit" class="btn btn-success">Exibir</button>
+  </form>
+
+  <table class="table table-hover" ng-if="statements.length > 0">
+    <thead>
+      <tr>
+        <th>Tipo de transação</th>
+        <th>Valor</th>
+        <th>Data</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="statement in statements">
+        <td>{{statement.type_statement}}</td>
+        <td>{{statement.balance}}</td>
+        <td>{{statement.created_at}}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p ng-if="statements.length < 1">Nenhum registro encontrado.</p>
+</div>
